@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scream Echo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="overlay">
+      <div class="overlay-card">
+        <h1>Scream Echo</h1>
+        <p>
+          You are alone in an endless corridor. Your voice returns as something else.
+          Scream if you dare.
+        </p>
+        <button id="startButton">Start Game</button>
+        <p class="overlay-hint">WASD to move · Mouse to look</p>
+      </div>
+    </div>
+
+    <div id="hud">
+      <span id="status">Mic: idle</span>
+      <span id="timer">Next Echo: --</span>
+    </div>
+    <div id="flash"></div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>

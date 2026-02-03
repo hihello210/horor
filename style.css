@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #050507;
+  color: #f2f2f2;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(14, 14, 18, 0.95), #020203 70%);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.overlay-card {
+  text-align: center;
+  padding: 2.5rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 16, 0.85);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  max-width: 420px;
+}
+
+.overlay-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.overlay-card p {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#startButton {
+  background: #a81414;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#startButton:hover {
+  transform: scale(1.05);
+  background: #d31a1a;
+}
+
+.overlay-hint {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+#hud {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  z-index: 5;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#flash {
+  position: fixed;
+  inset: 0;
+  background: rgba(200, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 9;
+}
+
+#flash.active {
+  opacity: 1;
+}
